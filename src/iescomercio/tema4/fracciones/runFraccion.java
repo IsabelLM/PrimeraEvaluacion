@@ -16,7 +16,6 @@ public class runFraccion {
         f1 = new Fraccion(2, 4);
         f2 = new Fraccion(3, 5);
 
-        System.out.println(f1.calculaReal());
         System.out.println("Suma: ");
         f3 = f1.suma(f2);
         f3.print();

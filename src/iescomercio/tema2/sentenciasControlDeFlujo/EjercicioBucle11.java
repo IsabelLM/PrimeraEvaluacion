@@ -7,7 +7,7 @@ package iescomercio.tema2.sentenciasControlDeFlujo;
 
 import java.util.Scanner;
 
-
+//add, commit, push
 /*calcular factorial entre de 0 y numero positivo.  Y HACER EL 8. 
 
  factorial de 4 es  4x3x2x1. 
@@ -23,8 +23,20 @@ public class EjercicioBucle11 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        double numero, factorial = 1;
 
+        do {
+            System.out.println("Introduce un numero:");
+            numero = sc.nextDouble();
+            if(numero<0){
+                System.out.println("No puedo calcular el factorial de un numero negativo");
+            }
+        } while (numero<0);
         
-        System.out.println("");
+        while(numero != 0){
+            factorial = factorial * numero;
+            numero --;
+        }
+        System.out.println("Factorial: " +factorial);
     }
 }

@@ -90,20 +90,21 @@ public class Fraccion {
         return aux;
     }
 
-    public Fraccion copia(Fraccion f) {
-        Fraccion aux = new Fraccion();
-        int n, d;
-        n = numerador;
-        d = denominador;
-        aux.setDenominador(d);
-        aux.setNumerador(n);
+    public boolean compararFraccional(Fraccion f) {
+        double aux1, aux2;
+        aux1 = calculaReal();
+        aux2 = f.calculaReal();
+        
+        return aux1 == aux2;
+    }
+
+    public Fraccion copia() {
+        Fraccion aux = new Fraccion(numerador, denominador);
         return aux;
     }
 
-    public float calculaReal() {
-        float resultado;
-        resultado = numerador / denominador;
-        return resultado;
+    public double calculaReal() {
+        return (double) numerador / denominador;
     }
 
     public void print() {

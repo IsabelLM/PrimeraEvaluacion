@@ -10,10 +10,10 @@ package iescomercio.tema4.aleatorio;
  * @author VESPERTINO
  */
 public class Run {
+
     public static void main(String[] args) {
         Aleatorio ale = new Aleatorio(10, 25);
-        
-        
-        System.out.println(+ale.muestraAleatorios(4));
+
+        ale.muestraAleatorios(5);
     }
 }

@@ -18,16 +18,12 @@ public class Aleatorio {
         afinal = pFinal;
     }
 
-    public double muestraAleatorios(int pNumero) {
+    public void muestraAleatorios(int pNumero) {
         //double valorAleatorio = Math.random() * (inicial - afinal) + ;
-        double valorAleatorio = 0;
-        while (pNumero != 0) {
-
+        double valorAleatorio;
+        for (; pNumero != 0; pNumero--) {
             valorAleatorio = Math.random() * (inicial - afinal) + afinal;
             System.out.println(valorAleatorio);
-            pNumero--;
         }
-        return valorAleatorio;
-
     }
 }

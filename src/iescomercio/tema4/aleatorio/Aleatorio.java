@@ -5,6 +5,8 @@
  */
 package iescomercio.tema4.aleatorio;
 
+import java.util.Scanner;
+
 /**
  *
  * @author VESPERTINO
@@ -16,6 +18,20 @@ public class Aleatorio {
     public Aleatorio(int pInicial, int pFinal) {
         inicial = pInicial;
         afinal = pFinal;
+    }
+
+    public void setInicial(int pInicial) {
+        inicial = pInicial;
+    }
+
+    public void setFinal(int pFinal) {
+        afinal = pFinal;
+    }
+
+    public void indicaInicialFinal() {
+        Scanner sc = new Scanner(System.in);
+        int i, f;
+        
     }
 
     public void muestraAleatorios(int pNumero) {
@@ -31,4 +47,5 @@ public class Aleatorio {
             System.out.println(valorAleatorio);
         }
     }
+
 }

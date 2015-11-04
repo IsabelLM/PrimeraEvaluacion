@@ -17,11 +17,11 @@ public class EjercicioIf9 {
         Scanner sc = new Scanner(System.in);
         int numOriginal, numCopia, resto, invertido = 0;
 
-        System.out.print("Dime un numero: ");
+        System.out.print("Dime un número: ");
         numOriginal = sc.nextInt();
 
         if (numOriginal < 0 || numOriginal > 9999) {
-            System.out.println("El numero no es valido.");
+            System.out.println("El número no es valido.");
         } else {
             numCopia = numOriginal;
 
@@ -32,9 +32,9 @@ public class EjercicioIf9 {
             }
         }
         if (invertido == numOriginal) {
-            System.out.println("El numero es capicua");
+            System.out.println("El número es capicua");
         } else {
-            System.out.println("EL numero no es capicua");
+            System.out.println("EL número no es capicua");
         }
     }
 }

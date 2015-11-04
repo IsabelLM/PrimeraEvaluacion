@@ -15,7 +15,7 @@ public class EjercicioIf9 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numOriginal, nCopia, resto, invertido = 0;
+        int numOriginal, numCopia, resto, invertido = 0;
 
         System.out.print("Dime un numero: ");
         numOriginal = sc.nextInt();
@@ -23,12 +23,12 @@ public class EjercicioIf9 {
         if (numOriginal < 0 || numOriginal > 9999) {
             System.out.println("El numero no es valido.");
         } else {
-            nCopia = numOriginal;
+            numCopia = numOriginal;
 
-            while (nCopia != 0) {
-                resto = nCopia % 10;
+            while (numCopia != 0) {
+                resto = numCopia % 10;
                 invertido = invertido * 10 + resto;
-                nCopia = nCopia / 10;
+                numCopia = numCopia / 10;
             }
         }
         if (invertido == numOriginal) {

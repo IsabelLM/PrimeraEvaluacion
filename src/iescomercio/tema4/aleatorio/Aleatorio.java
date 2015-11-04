@@ -19,9 +19,14 @@ public class Aleatorio {
     }
 
     public void muestraAleatorios(int pNumero) {
-        //double valorAleatorio = Math.random() * (inicial - afinal) + ;
+
         double valorAleatorio;
+
         for (; pNumero != 0; pNumero--) {
+
+            //Para enteros:
+            // valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
+            //Para sacar decimales:
             valorAleatorio = Math.random() * (inicial - afinal) + afinal;
             System.out.println(valorAleatorio);
         }

@@ -20,7 +20,7 @@ public class EjercicioIf9 {
         System.out.print("Dime un numero: ");
         numOriginal = sc.nextInt();
 
-        if (numOriginal < 0 || numOriginal > 99999) {
+        if (numOriginal < 0 || numOriginal > 9999) {
             System.out.println("El numero no es valido.");
         } else {
             nCopia = numOriginal;

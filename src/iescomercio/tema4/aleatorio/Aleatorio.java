@@ -31,7 +31,6 @@ public class Aleatorio {
     public void setFinal(int pFinal) {
         afinal = pFinal;
     }
-    
 
     public void indicaInicialFinal() {
         Scanner sc = new Scanner(System.in);
@@ -43,25 +42,35 @@ public class Aleatorio {
         afinal = f;
     }
 
-    public void muestraAleatorios() {
-        Scanner sc = new Scanner(System.in);
-        int aleatorios;
-        double valorAleatorio;
+    public int generaAleatorio() {
+        int aleatorio = 1;
+        int valorAleatorio = 0;
+        for (; aleatorio != 0; aleatorio--) {
 
-        System.out.println("Indica cuanto aleatorios quieres que se muestren");
-        aleatorios = sc.nextInt();
+            //Para sacar enteros:
+            valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
+            //Para sacar decimales:
+            // valorAleatorio = Math.random() * (inicial - afinal) + afinal;
+        }
+        return valorAleatorio;
+    }
+
+    public void muestraAleatorios(int pAleatorios) {
+        Scanner sc = new Scanner(System.in);
+        int aleatorios = pAleatorios;
+        int valorAleatorio;
 
         for (; aleatorios != 0; aleatorios--) {
 
             //Para sacar enteros:
-            // valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
+            valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
             //Para sacar decimales:
-            valorAleatorio = Math.random() * (inicial - afinal) + afinal;
+            // valorAleatorio = Math.random() * (inicial - afinal) + afinal;
             System.out.println(valorAleatorio);
         }
     }
 
-    public void juegoAleatorio() {
+    public void juegoAdivinaNumero() {
         Scanner sc = new Scanner(System.in);
         int n, numAleatorio = 0, error = 0;
 

@@ -19,6 +19,6 @@ public class Run {
         ale.muestraAleatorios();
         
         System.out.println("_____Juego aleatorio____");
-        juego.juegoAleatorio();
+        juego.juegoAdivinaNumero();
     }
 }

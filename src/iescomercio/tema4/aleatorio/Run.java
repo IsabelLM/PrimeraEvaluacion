@@ -12,8 +12,13 @@ package iescomercio.tema4.aleatorio;
 public class Run {
 
     public static void main(String[] args) {
-        Aleatorio ale = new Aleatorio(10, 25);
-
-        ale.muestraAleatorios(5);
+        Aleatorio ale = new Aleatorio();
+        Aleatorio juego = new Aleatorio();
+        
+        ale.indicaInicialFinal();
+        ale.muestraAleatorios();
+        
+        System.out.println("_____Juego aleatorio____");
+        juego.juegoAleatorio();
     }
 }

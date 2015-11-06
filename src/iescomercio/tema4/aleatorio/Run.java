@@ -16,7 +16,7 @@ public class Run {
         Aleatorio juego = new Aleatorio();
         
         ale.indicaInicialFinal();
-        ale.muestraAleatorios();
+        ale.muestraVariosAleatorios();
         
         System.out.println("_____Juego aleatorio____");
         juego.juegoAdivinaNumero();

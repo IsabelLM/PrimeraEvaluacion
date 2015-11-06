@@ -23,25 +23,25 @@ public class Run {
         miCoche2 = new Coche("Opel", "Corsa");
         miTaller = new Taller();
 
-        System.out.println("Coche 1 entra? " + miTaller.aceptarCoche(miCoche1, "ruedas"));
-        miCoche1.acumularAveria(precioAleatorio.generaAleatorio());
+        System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "ruedas"));
+        miCoche1.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 1: " + miCoche1.getPrecioAverias());
         miTaller.devolverCoche();
-        System.out.println("Coche 2 entra?" + miTaller.aceptarCoche(miCoche2, "aceite"));
-        miCoche2.acumularAveria(precioAleatorio.generaAleatorio());
+        System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "puerta"));
+        miCoche2.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 2: " + miCoche2.getPrecioAverias());
         miTaller.devolverCoche();
-
+        
         System.out.println("_____");
 
-        System.out.println("Coche 1 entra? " + miTaller.aceptarCoche(miCoche1, "ruedas"));
-        miCoche1.acumularAveria(precioAleatorio.generaAleatorio());
+        System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "ruedas"));
+        miCoche1.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 1: " + miCoche1.getPrecioAverias());
         miTaller.devolverCoche();
-        System.out.println("Coche 2 entra?" + miTaller.aceptarCoche(miCoche2, "aceite"));
-        miCoche2.acumularAveria(precioAleatorio.generaAleatorio());
+        System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "puerta"));
+        miCoche2.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 2: " + miCoche2.getPrecioAverias());
-
+        System.out.println(miTaller.getNumeroCochesAtendidos());
         miTaller.devolverCoche();
 
     }

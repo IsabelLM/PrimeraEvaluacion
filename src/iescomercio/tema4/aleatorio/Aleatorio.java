@@ -42,7 +42,7 @@ public class Aleatorio {
         afinal = f;
     }
 
-    public int generaAleatorio() {
+    public int generarUnAleatorio() {
         int aleatorio = 1;
         int valorAleatorio = 0;
         for (; aleatorio != 0; aleatorio--) {
@@ -55,9 +55,12 @@ public class Aleatorio {
         return valorAleatorio;
     }
 
-    public void muestraAleatorios(int pAleatorios) {
+    public void muestraVariosAleatorios() {
         Scanner sc = new Scanner(System.in);
-        int aleatorios = pAleatorios;
+        int aleatorios;
+        System.out.println("Di cuantos aleatorios quieres que se muestren:");
+        aleatorios = sc.nextInt();
+
         int valorAleatorio;
 
         for (; aleatorios != 0; aleatorios--) {

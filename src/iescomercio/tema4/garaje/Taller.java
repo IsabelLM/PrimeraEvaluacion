@@ -20,7 +20,9 @@ public class Taller {
         averia = "";
         numeroCochesAtendidos = 0;
     }
-
+    public int getNumeroCochesAtendidos(){
+        return numeroCochesAtendidos;
+    }
     public boolean aceptarCoche(Coche pCoche, String pAveria) {
 
         if (aCoche == null) {

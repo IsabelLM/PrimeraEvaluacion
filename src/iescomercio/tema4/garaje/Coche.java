@@ -18,7 +18,7 @@ public class Coche {
     public Coche(String pMarca, String pModelo) {
         marca = pMarca;
         modelo = pModelo;
-        aMotor = new Motor(150);
+        aMotor = new Motor(100);
         precioAverias = 0;
     }
 

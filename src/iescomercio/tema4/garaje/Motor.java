@@ -18,7 +18,7 @@ public class Motor {
 
     public Motor(int pCv) {
         cv = pCv;
-        litrosAceite = 0;
+        litrosAceite = 25;
     }
 
     public int getLitros() {

@@ -5,6 +5,8 @@
  */
 package iescomercio.tema4.garaje;
 
+import iescomercio.tema4.aleatorio.Aleatorio;
+
 /**
  *
  * @author VESPERTINO
@@ -20,15 +22,18 @@ public class Taller {
         averia = "";
         numeroCochesAtendidos = 0;
     }
-    public int getNumeroCochesAtendidos(){
+
+    public int getNumeroCochesAtendidos() {
         return numeroCochesAtendidos;
     }
-    public boolean aceptarCoche(Coche pCoche, String pAveria) {
 
+    public boolean aceptarCoche(Coche pCoche, String pAveria) {
         if (aCoche == null) {
             aCoche = pCoche;
             averia = pAveria;
-            numeroCochesAtendidos++;
+            if (averia == "aceite") {
+                aCoche.getaMotor().setLitros(aCoche.getaMotor().getLitros() + 10);
+            }
             return true;
         } else {
             return false;
@@ -36,7 +41,13 @@ public class Taller {
     }
 
     public void devolverCoche() {
+        Aleatorio precioAleatorio = new Aleatorio(100, 1000);
+
+        aCoche.acumularAveria(precioAleatorio.generarUnAleatorio());
         aCoche = null;
+        averia = "";
+        numeroCochesAtendidos++;
+
     }
 
 }

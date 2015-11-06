@@ -23,25 +23,31 @@ public class Run {
         miCoche2 = new Coche("Opel", "Corsa");
         miTaller = new Taller();
 
-        System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "ruedas"));
-        miCoche1.acumularAveria(precioAleatorio.generarUnAleatorio());
-        System.out.println("Precio averia acumulado coche 1: " + miCoche1.getPrecioAverias());
+        //mirar cuantos litros tiene antes de entrar
+        System.out.println("Aceite coche 1" + miCoche1.getaMotor().getLitros());
+        //mete coche1
+        System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "aceite"));
+        //mirar cuantos litros tiene despues de entrar
+        System.out.println("Aceite coche 1" + miCoche1.getaMotor().getLitros());
+        //devolver el coche
         miTaller.devolverCoche();
+        //mostrar precio de la averia
+        System.out.println("Precio averia: " + miCoche1.getPrecioAverias());
+        //meter coche 2, devolver y precio averia
         System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "puerta"));
-        miCoche2.acumularAveria(precioAleatorio.generarUnAleatorio());
-        System.out.println("Precio averia acumulado coche 2: " + miCoche2.getPrecioAverias());
         miTaller.devolverCoche();
-        
+        System.out.println("Precio averia: " + miCoche2.getPrecioAverias());
+
         System.out.println("_____");
 
         System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "ruedas"));
         miCoche1.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 1: " + miCoche1.getPrecioAverias());
         miTaller.devolverCoche();
-        System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "puerta"));
+        System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "aceite"));
         miCoche2.acumularAveria(precioAleatorio.generarUnAleatorio());
         System.out.println("Precio averia acumulado coche 2: " + miCoche2.getPrecioAverias());
-        System.out.println(miTaller.getNumeroCochesAtendidos());
+        System.out.println("Coches atendidos: " + miTaller.getNumeroCochesAtendidos());
         miTaller.devolverCoche();
 
     }

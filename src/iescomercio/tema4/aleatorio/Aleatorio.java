@@ -33,6 +33,7 @@ public class Aleatorio {
     }
 
     public void indicaInicialFinal() {
+        //Método para que el usuario indique entre que dos numeros quiere generar aleatorios
         Scanner sc = new Scanner(System.in);
         int i, f;
         System.out.println("Indica un numero inicial y uno final");
@@ -43,8 +44,8 @@ public class Aleatorio {
     }
 
     public int generarUnAleatorio() {
-        int aleatorio = 1;
-        int valorAleatorio = 0;
+        //Método para generar solo 1 aleatorio
+        int aleatorio = 1, valorAleatorio = 0;
         for (; aleatorio != 0; aleatorio--) {
 
             //Para sacar enteros:
@@ -56,15 +57,14 @@ public class Aleatorio {
     }
 
     public void muestraVariosAleatorios() {
+        //Metodo que pide al usuario que indique cuántos aleatorios quiere que genere
         Scanner sc = new Scanner(System.in);
-        int aleatorios;
+        int aleatorios, valorAleatorio;
+
         System.out.println("Di cuantos aleatorios quieres que se muestren:");
         aleatorios = sc.nextInt();
 
-        int valorAleatorio;
-
         for (; aleatorios != 0; aleatorios--) {
-
             //Para sacar enteros:
             valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
             //Para sacar decimales:
@@ -74,6 +74,7 @@ public class Aleatorio {
     }
 
     public void juegoAdivinaNumero() {
+        //Metodo para adivinar un numero. Al final muestra cuantos errores se han cometido.
         Scanner sc = new Scanner(System.in);
         int n, numAleatorio = 0, error = 0;
 

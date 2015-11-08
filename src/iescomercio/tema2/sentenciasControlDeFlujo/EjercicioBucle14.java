@@ -30,7 +30,7 @@ public class EjercicioBucle14 {
             if (edad > 18) {
                 contadorEdad++;
             }
-            if (alturaMedia > 1.75) {
+            if (altura > 1.75) {
                 contadorAltura++;
             }
         }

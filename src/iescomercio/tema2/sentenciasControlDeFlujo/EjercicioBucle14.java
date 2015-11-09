@@ -15,7 +15,6 @@ public class EjercicioBucle14 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int edad, edadMedia = 0, contadorEdad = 0, contadorAltura = 0, alumno;
         float altura, alturaMedia = 0;
 
@@ -36,9 +35,9 @@ public class EjercicioBucle14 {
         }
         edadMedia = edadMedia / 5;
         alturaMedia = alturaMedia / 5;
-        System.out.println("La edad media es: " +edadMedia);
-        System.out.println("La altura media es: " +alturaMedia);
-        System.out.println("El numero de alumnos mayores de 18 es: "+contadorEdad);
-        System.out.println("EL numero de alumnos más altos de 1.75 es: "+contadorAltura);
+        System.out.println("La edad media es: " + edadMedia);
+        System.out.println("La altura media es: " + alturaMedia);
+        System.out.println("El numero de alumnos mayores de 18 es: " + contadorEdad);
+        System.out.println("EL numero de alumnos más altos de 1.75 es: " + contadorAltura);
     }
 }

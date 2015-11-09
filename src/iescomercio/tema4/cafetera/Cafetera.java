@@ -11,7 +11,7 @@ package iescomercio.tema4.cafetera;
  */
 public class Cafetera {
 
-    int capacidadMaxima, cantidadActual;
+    private int capacidadMaxima, cantidadActual;
 
     public Cafetera() {
         capacidadMaxima = 1000;
@@ -24,20 +24,22 @@ public class Cafetera {
     }
 
     public Cafetera(int pCapacidadMaxima, int pCantidadActual) {
-        capacidadMaxima = pCapacidadMaxima;
-        cantidadActual = pCantidadActual;
 
-        if (cantidadActual > capacidadMaxima) {
-            cantidadActual = capacidadMaxima;
+        if (pCantidadActual > pCapacidadMaxima) {
+            capacidadMaxima = pCantidadActual;
+        } else {
+            capacidadMaxima = pCapacidadMaxima;
+            cantidadActual = pCantidadActual;
         }
+        cantidadActual = pCantidadActual;
     }
 
-    public void setCapacidadMaxima(int capacidadMaxima) {
-        capacidadMaxima = capacidadMaxima;
+    public void setCapacidadMaxima(int pCapacidadMaxima) {
+        capacidadMaxima = pCapacidadMaxima;
     }
 
-    public void setCantidadActual(int cantidadActual) {
-        cantidadActual = cantidadActual;
+    public void setCantidadActual(int pCantidadActual) {
+        cantidadActual = pCantidadActual;
     }
 
     public int getCapacidadMaxima() {
@@ -63,8 +65,12 @@ public class Cafetera {
     public void vaciarCafetera() {
         cantidadActual = 0;
     }
-    
-    public void agregarCafe(int pCafeAñadido){
-        cantidadActual = cantidadActual + pCafeAñadido;
+
+    public void agregarCafe(int pCafeAñadido) {
+        if (pCafeAñadido + cantidadActual > capacidadMaxima) {
+            llenarCafetera();
+        } else {
+            cantidadActual = cantidadActual + pCafeAñadido;
+        }
     }
 }

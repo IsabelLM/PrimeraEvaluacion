@@ -39,7 +39,14 @@ public class Cafetera {
     }
 
     public void setCantidadActual(int pCantidadActual) {
-        cantidadActual = pCantidadActual;
+       
+
+        if (pCantidadActual > capacidadMaxima) {
+            System.out.println("No cabe tanto, la llenamos entera");
+            cantidadActual = capacidadMaxima;
+        } else {
+            cantidadActual = pCantidadActual;
+        }
     }
 
     public int getCapacidadMaxima() {

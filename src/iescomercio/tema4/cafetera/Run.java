@@ -42,5 +42,8 @@ public class Run {
         //La capacidad actual, de la segunda cafetera, era mayor que la maxima.
         System.out.println(miCafetera2.getCantidadActual());
         System.out.println(miCafetera2.getCapacidadMaxima());
+        
+        Cafetera cafetera2 = new Cafetera();
+        cafetera2.setCantidadActual(20000);
     }
 }

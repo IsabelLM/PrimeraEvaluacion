@@ -23,6 +23,7 @@ public class EjercicioBucle14 {
             edad = sc.nextInt();
             System.out.println("Dime la estatura del alumno:");
             altura = sc.nextFloat();
+            System.out.println("-----");
             edadMedia += edad;
             alturaMedia += altura;
 

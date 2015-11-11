@@ -10,7 +10,20 @@ package iescomercio.tema2;
  * @author VESPERTINO
  */
 public class Ejercicio1 {
+
     public static void main(String[] args) {
-        System.out.println("Java te quiere!");                
+        //System.out.println("Java te quiere!");     
+        int j;
+
+        for (int i = 0; i < 3; i++) {
+
+            j = i + 1;
+
+            while (j < 4) {
+                System.out.println(j - i);
+
+                j++;
+            }
+        }
     }
 }

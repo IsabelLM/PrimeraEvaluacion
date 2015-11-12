@@ -13,7 +13,7 @@ public class Lobo extends Canino {
 
     @Override
     public void comer() {
-        System.out.println("Estoy comiendo como un lobo");
+        System.out.println("Estoy comiendo como los lobos");
     }
 
     @Override

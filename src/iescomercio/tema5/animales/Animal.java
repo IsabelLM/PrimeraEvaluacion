@@ -14,11 +14,11 @@ public class Animal {
     private String foto, tipo_comida, localizacion, tamaño;
 
     public void hacerRuido() {
-        System.out.println("Hago ruido");
+        System.out.println("Hago ruido como un animal");
     }
 
     public void comer() {
-        System.out.println("Estoy comiendo como animal");
+        System.out.println("Estoy comiendo como un animal");
     }
 
     public void dormir() {

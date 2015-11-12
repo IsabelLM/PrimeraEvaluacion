@@ -15,35 +15,34 @@ public class Run {
         Medico miMedico;
         MedicoDeCabecera miMedicoDeCabecera;
         Cirujano miCirujano;
-        
+
         miMedico = new Medico();
         miMedicoDeCabecera = new MedicoDeCabecera();
         miCirujano = new Cirujano();
-        
-        //Cirujano tiene un atributo
-        miCirujano.trabajaEnHospital=true;
-        //Medico de cabecera tiene dos atributos
-        miMedicoDeCabecera.visitaLasCasas=true;
-        miMedicoDeCabecera.trabajaEnHospital=true;
-        
-        //Medico tiene un atributo         
+
+        //¿Cuántos atributos tiene la clase Cirujano?:1.
+        miCirujano.trabajaEnHospital = true;
+        //¿Cuántos atributos tiene la clase MedicoDeCabecera?:2. 
+        miMedicoDeCabecera.visitaLasCasas = true;
+        miMedicoDeCabecera.trabajaEnHospital = true;
+
+        //¿Cuántos métodos tiene la clase Medico?:1.
         miMedico.tratarPaciente();
-        
-        //Cirujano tiene 2 metodos
+
+        //¿Cuántos métodos tiene la clase Cirujano?:2.
         miCirujano.tratarPaciente();
         miCirujano.hacerIncision();
-        
-        //MedicoDeCabecera tiene dos metodos
+
+        //¿Cuántos métodos tiene la clase MedicoDeCabecera?:2.
+        //¿Puede un MedicoDeCabecera tratar pacientes?:Si.
+        //¿Puede un MedicoDeCabecera hacer incisiones?:No.
         miMedicoDeCabecera.aconsejaPacientes();
         miMedicoDeCabecera.tratarPaciente();
-        
-        //Metodos heredado de Medico.
-        miMedicoDeCabecera.tratarPaciente();
-        
-        //Metodo heredado pero modificado.
-        miCirujano.tratarPaciente();
-        
-        //Metodos heredado de la clase Object
+
+        /*
+         *¿Por qué aparecen más métodos y propiedades de las definidas en las
+         clases en cualquiera de los objetos? Porque son métodos heredados de la clase Object
+         */
         miCirujano.getClass();
         miMedicoDeCabecera.hashCode();
         miMedico.notify();

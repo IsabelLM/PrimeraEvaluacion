@@ -10,6 +10,7 @@ package iescomercio.tema5.hospital;
  * @author VESPERTINO
  */
 public class Cirujano extends Medico{
+    @Override
     public void tratarPaciente() {
 
     }

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioBucle9 {
+public class EjercicioBucle09 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

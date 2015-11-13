@@ -11,22 +11,25 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioWhile8 {
+public class EjercicioBucle06 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numero;
-        int contador = 0;
-      
-        //Con While
-        System.out.println("Dame un número");
-        numero = sc.nextInt();
-        while (numero >= 0) {
+        int numero = 1;
+        int par = 0;
+        int impar = 0;
+        while (numero != 0) {
             System.out.println("Dame un número");
             numero = sc.nextInt();
-            contador++;
+            if (numero != 0) {
+                if (numero % 2 == 0) {
+                    par++;
+                } else {
+                    impar++;
+                }
+            }
         }
-        System.out.println("Has introducido: " + contador + " numeros");           
-        }
+        System.out.println("Pares: " + par);
+        System.out.println("Impares: " + impar);
     }
-
+}

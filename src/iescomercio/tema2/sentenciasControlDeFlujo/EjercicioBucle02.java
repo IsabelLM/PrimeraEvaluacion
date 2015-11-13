@@ -14,7 +14,7 @@ package iescomercio.tema2.sentenciasControlDeFlujo;
  *
  * @author Isabel
  */
-public class EjercicioWhile2 {
+public class EjercicioBucle02 {
 
     public static void main(String[] args) {
         int numero = 20;

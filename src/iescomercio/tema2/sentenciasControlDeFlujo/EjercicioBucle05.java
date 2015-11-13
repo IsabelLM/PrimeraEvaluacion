@@ -9,7 +9,7 @@ package iescomercio.tema2.sentenciasControlDeFlujo;
  *
  * @author VESPERTINO
  */
-public class EjercicioWhile5 {
+public class EjercicioBucle05 {
 
     public static void main(String[] args) {
         int suma = 0, n = 8;

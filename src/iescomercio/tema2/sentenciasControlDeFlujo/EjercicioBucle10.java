@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioWhile10 {
+public class EjercicioBucle10 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -17,7 +17,7 @@ package iescomercio.tema2.sentenciasControlDeFlujo;
 empezando en el numero 100
 
 */
-public class EjercicioWhile1 {
+public class EjercicioBucle01 {
 
     public static void main(String[] args) {
         int numero = 1;

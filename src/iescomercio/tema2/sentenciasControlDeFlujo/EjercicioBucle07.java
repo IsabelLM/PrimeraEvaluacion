@@ -9,7 +9,7 @@ package iescomercio.tema2.sentenciasControlDeFlujo;
  *
  * @author VESPERTINO
  */
-public class EjercicioWhile7 {
+public class EjercicioBucle07 {
 
     public static void main(String[] args) {
         int contador = 1;

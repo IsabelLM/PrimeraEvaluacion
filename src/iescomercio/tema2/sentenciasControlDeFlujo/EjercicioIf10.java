@@ -17,26 +17,35 @@ public class EjercicioIf10 {
         Scanner sc = new Scanner(System.in);
         String mes;
         int dia, año;
+        boolean error = true;
 
-        System.out.println("Introduce un día:");
-        dia = sc.nextInt();
-        System.out.println("Introduce un mes");
-        mes = sc.next();
-        System.out.println("Introduce un año");
-        año = sc.nextInt();
+        do {
+            System.out.println("Introduce un día:");
+            dia = sc.nextInt();
+            System.out.println("Introduce un mes:");
+            mes = sc.next();
+            System.out.println("Introduce un año:");
+            año = sc.nextInt();
+            
+            if (dia < 1 || dia > 31) { 
+                System.out.println("La fecha no es correcta");
+                error = true;
+            } else if (dia == 31) { //Meses de 30 días
+                if ("febrero".equals(mes) || "abril".equals(mes) || "junio".equals(mes)
+                        || "septiembre".equals(mes) || "noviembre".equals(mes)) {
+                    System.out.println("La fecha no es correcta, " + mes + " no tiene tantos días.");
+                }
+                error = true;
+            } else if (dia > 28) { //febrero
+                if ("febrero".equals(mes)) {
+                    System.out.println("Febrero no tiene más de 28 días. ");
+                    error = true;
+                }
+            } else {
+                System.out.println("La fecha " + dia + " de " + mes + " del " + año + " es correcta.");
+                error = false;
+            }
+        } while (error == true);
 
-        if (dia >= 31) {
-            if ("febrero".equals(mes) || "abril".equals(mes) || "junio".equals(mes)
-                    || "septiembre".equals(mes) || "noviembre".equals(mes)) {
-                System.out.println("La fecha no es correcta, " + mes + " no tiene tantos días.");
-            }
-        } else if (dia == 29 || dia == 30) {
-            if ("febrero".equals(mes)) {
-                System.out.println("Febrero no tiene más de 28 días. ");
-            }
-        } else {
-            System.out.println("La fecha " + dia + " de " + mes + " del " + año + " es correcta.");
-        }
     }
-
 }

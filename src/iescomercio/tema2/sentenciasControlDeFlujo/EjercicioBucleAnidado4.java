@@ -12,16 +12,19 @@ import java.util.Scanner;
  * @author VESPERTINO
  */
 public class EjercicioBucleAnidado4 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.println("Introduce un numero");
         n = sc.nextInt();
-        
-        for (int i=1; 1 <=n; i++){
-            for(int j= 1; j<= n; j++){
+
+        for (int i = 1; 1 <= n; i++) {
+            for (int j = 1; j <= n; j++) {
                 System.out.println("*");
             }
+            
+        }
         }
     }
-}
+

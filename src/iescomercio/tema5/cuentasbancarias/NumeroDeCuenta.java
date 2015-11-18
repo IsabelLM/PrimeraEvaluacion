@@ -54,7 +54,7 @@ public class NumeroDeCuenta {
     
     @Override
     public String toString(){
-        return ("Banco: " + banco + " Sucursal " + sucursal 
-                + " Digito de control " + digitoDeControl + " Numero de Cuenta " + numeroDeCuenta);
+        return ("Banco: " + banco + "\nSucursal: " + sucursal 
+                + "\nDigito de control: " + digitoDeControl + "\nNumero de Cuenta: " + numeroDeCuenta);
     }
 }

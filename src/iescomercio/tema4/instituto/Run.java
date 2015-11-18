@@ -28,6 +28,6 @@ public class Run {
         System.out.println("Mates: " + mates.getCalificacion());
         System.out.println("Historia: " + historia.getCalificacion());
         //sacar la media
-        System.out.println(profe.calcularMedia(isabel));
+        System.out.println("La media es: " + profe.calcularMedia(isabel));
     }
 }

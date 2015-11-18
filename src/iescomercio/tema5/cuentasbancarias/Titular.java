@@ -50,6 +50,6 @@ public class Titular {
     
     @Override
     public String toString(){
-        return ("Nombre: " + nombre +" Apellidos " + apellidos + " Edad: " + edad);
+        return ("Nombre: " + nombre +" \nApellidos: " + apellidos + " \nEdad: " + edad);
     }
 }

@@ -44,7 +44,7 @@ public class CuentaCorriente {
     }
 
     public void ingresar(double pIngreso) {
-        saldo = saldo - pIngreso;
+        saldo = saldo + pIngreso;
     }
 
     public void reintegro(double pReintrego) {
@@ -56,8 +56,21 @@ public class CuentaCorriente {
                 + " Saldo: " + saldo);
     }
 
+    public boolean equals(CuentaCorriente pCuentaCorriente) {
+       NumeroDeCuenta aux1, aux2;
+       aux1 = numDeCuenta;
+       aux2 = pCuentaCorriente.getNumDeCuenta();
+               
+        if (aux1 == aux2) {
+            return true;
+
+        } else {
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
-        return ("Nombre: " + aTitular.getNombre() + " Apellidos " + aTitular.getApellidos() + " Edad: " + aTitular.getEdad());
+        return (aTitular.toString() );
     }
 }

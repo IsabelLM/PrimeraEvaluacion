@@ -43,15 +43,23 @@ public class Aleatorio {
         afinal = f;
     }
 
-    public int generarUnAleatorio() {
-        //Método para generar solo 1 aleatorio
+    public int generarUnAleatorioEntero() {
+        //Método para generar solo 1 aleatorio entero
         int aleatorio = 1, valorAleatorio = 0;
         for (; aleatorio != 0; aleatorio--) {
 
-            //Para sacar enteros:
             valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
-            //Para sacar decimales:
-            // valorAleatorio = Math.random() * (inicial - afinal) + afinal;
+
+        }
+        return valorAleatorio;
+    }
+
+    public double generarunAleatorioDouble() {
+        //Método para generar 1 aleatorio con decimales
+        double aleatorio = 1, valorAleatorio = 0;
+        for (; aleatorio != 0; aleatorio--) {
+
+            valorAleatorio = Math.random() * (inicial - afinal) + afinal;
         }
         return valorAleatorio;
     }

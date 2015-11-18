@@ -41,11 +41,11 @@ public class Run {
         System.out.println("_____");
 
         System.out.println("¿Coche 1 entra?: " + miTaller.aceptarCoche(miCoche1, "ruedas"));
-        miCoche1.acumularAveria(precioAleatorio.generarUnAleatorio());
+        miCoche1.acumularAveria(precioAleatorio.generarUnAleatorioEntero());
         System.out.println("Precio averia acumulado coche 1: " + miCoche1.getPrecioAverias());
         miTaller.devolverCoche();
         System.out.println("¿Coche 2 entra?: " + miTaller.aceptarCoche(miCoche2, "aceite"));
-        miCoche2.acumularAveria(precioAleatorio.generarUnAleatorio());
+        miCoche2.acumularAveria(precioAleatorio.generarUnAleatorioEntero());
         System.out.println("Precio averia acumulado coche 2: " + miCoche2.getPrecioAverias());
         System.out.println("Coches atendidos: " + miTaller.getNumeroCochesAtendidos());
         miTaller.devolverCoche();

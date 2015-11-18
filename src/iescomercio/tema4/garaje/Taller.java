@@ -43,7 +43,7 @@ public class Taller {
     public void devolverCoche() {
         Aleatorio precioAleatorio = new Aleatorio(100, 1000);
 
-        aCoche.acumularAveria(precioAleatorio.generarUnAleatorio());
+        aCoche.acumularAveria(precioAleatorio.generarUnAleatorioEntero());
         aCoche = null;
         averia = "";
         numeroCochesAtendidos++;

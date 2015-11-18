@@ -5,7 +5,6 @@
  */
 package iescomercio.tema4.instituto;
 
-import iescomercio.tema4.aleatorio.Aleatorio;
 
 /**
  *

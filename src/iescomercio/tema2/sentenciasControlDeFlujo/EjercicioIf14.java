@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Isabel
  */
-public class EjercicioIf10 {
+public class EjercicioIf14 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -26,7 +26,7 @@ public class EjercicioBucleAnidado6 {
     }
 
 
-for(s =1; s == n; s++){
-            System.out.println("");
-}
+//for(s =1; s == n; s++){
+//            System.out.println("");
+//}
 }

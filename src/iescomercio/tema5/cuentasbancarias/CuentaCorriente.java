@@ -5,25 +5,30 @@
  */
 package iescomercio.tema5.cuentasbancarias;
 
+import java.util.Objects;
+
 /**
  *
  * @author VESPERTINO
  */
 public class CuentaCorriente {
 
-    Titular aTitular;
-    NumeroDeCuenta numDeCuenta;
-    double saldo;
+    private Titular aTitular;
+    private NumeroDeCuenta numDeCuenta;
+    private double saldo;
 
-    public CuentaCorriente(Titular pTitular, NumeroDeCuenta pNumDeCuenta, double pSaldo) {
-        aTitular = pTitular;
-        numDeCuenta = pNumDeCuenta;
-        saldo = pSaldo;
+    public CuentaCorriente() {
     }
 
-    public CuentaCorriente(Titular pTitular, NumeroDeCuenta pNumDeCuenta) {
-        aTitular = pTitular;
-        numDeCuenta = pNumDeCuenta;
+    public CuentaCorriente(Titular aTitular, NumeroDeCuenta numDeCuenta, double saldo) {
+        this.aTitular = aTitular;
+        this.numDeCuenta = numDeCuenta;
+        this.saldo = saldo;
+    }
+
+    public CuentaCorriente(Titular aTitular, NumeroDeCuenta numDeCuenta) {
+        this.aTitular = aTitular;
+        this.numDeCuenta = numDeCuenta;
         saldo = 15.3;
     }
 
@@ -39,8 +44,8 @@ public class CuentaCorriente {
         return saldo;
     }
 
-    public void saldo(double pSaldo) {
-        saldo = pSaldo;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public void ingresar(double pIngreso) {
@@ -56,21 +61,32 @@ public class CuentaCorriente {
                 + " Saldo: " + saldo);
     }
 
-    public boolean equals(CuentaCorriente pCuentaCorriente) {
-       NumeroDeCuenta aux1, aux2;
-       aux1 = numDeCuenta;
-       aux2 = pCuentaCorriente.getNumDeCuenta();
-               
-        if (aux1 == aux2) {
-            return true;
-
-        } else {
-            return false;
-        }
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
 
     @Override
+    public boolean equals(Object obj) {
+       NumeroDeCuenta ndc = (NumeroDeCuenta) obj;
+       return numDeCuenta.getNumeroDeCuenta() == ndc.getNumeroDeCuenta();
+    }
+
+//    public boolean equals(CuentaCorriente pCuentaCorriente) {
+//        NumeroDeCuenta aux1, aux2;
+//        
+//        aux2 = pCuentaCorriente.getNumDeCuenta();
+//
+//        if (numDeCuenta == aux2) {
+//            return true;
+//
+//        } else {
+//            return false;
+//        }
+//    }
+    @Override
     public String toString() {
-        return (aTitular.toString() );
+        return (aTitular.toString());
     }
 }

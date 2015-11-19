@@ -13,27 +13,27 @@ public class NumeroDeCuenta {
 
     private int banco, sucursal, digitoDeControl, numeroDeCuenta;
 
-    public NumeroDeCuenta(int pBanco, int pSucursal, int pDigitoDeControl, int pNumeroDeCuenta) {
-        banco = pBanco;
-        sucursal = pSucursal;
-        digitoDeControl = pDigitoDeControl;
-        numeroDeCuenta = pNumeroDeCuenta;
+    public NumeroDeCuenta(int banco, int sucursal, int digitoDeControl, int numeroDeCuenta) {
+        this.banco = banco;
+        this.sucursal = sucursal;
+        this.digitoDeControl = digitoDeControl;
+        this.numeroDeCuenta = numeroDeCuenta;
     }
 
-    public void setBanco(int pBanco) {
-        banco = pBanco;
+    public void setBanco(int banco) {
+        this.banco = banco;
     }
 
-    public void setSucursal(int pSucursal) {
-        sucursal = pSucursal;
+    public void setSucursal(int sucursal) {
+        this.sucursal = sucursal;
     }
 
-    public void setDigitoDeControl(int pDigitoDeControl) {
-        digitoDeControl = pDigitoDeControl;
+    public void setDigitoDeControl(int digitoDeControl) {
+        this.digitoDeControl = digitoDeControl;
     }
 
-    public void setNumeroDeCuenta(int pNumeroDeCuenta) {
-        numeroDeCuenta = pNumeroDeCuenta;
+    public void setNumeroDeCuenta(int numeroDeCuenta) {
+        this.numeroDeCuenta = numeroDeCuenta;
     }
 
     public int getBanco() {
@@ -51,10 +51,10 @@ public class NumeroDeCuenta {
     public int getNumeroDeCuenta() {
         return numeroDeCuenta;
     }
-    
+
     @Override
-    public String toString(){
-        return ("Banco: " + banco + "\nSucursal: " + sucursal 
+    public String toString() {
+        return ("Banco: " + banco + "\nSucursal: " + sucursal
                 + "\nDigito de control: " + digitoDeControl + "\nNumero de Cuenta: " + numeroDeCuenta);
     }
 }

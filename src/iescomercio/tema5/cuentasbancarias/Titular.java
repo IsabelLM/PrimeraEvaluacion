@@ -31,8 +31,8 @@ public class Titular {
         apellidos = pApellidos;
     }
 
-    public void setEdad(int pEdad) {
-        edad = pEdad;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
     //Getter
     public String getNombre() {

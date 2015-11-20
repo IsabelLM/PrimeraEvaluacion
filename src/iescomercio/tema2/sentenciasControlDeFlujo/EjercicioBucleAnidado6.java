@@ -15,7 +15,7 @@ public class EjercicioBucleAnidado6 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n, m ,s ;
+        int n, m, horizontal, vertical;
 
         do {
             System.out.println("Dime un numero para N: ");
@@ -23,10 +23,14 @@ public class EjercicioBucleAnidado6 {
             System.out.println("Dime un numero para M");
             m = sc.nextInt();
         } while (n < 0 || m < 0);
+        
+        for (horizontal = 0; horizontal < n; horizontal++) {
+             System.out.println("-");
+            for (vertical = 0; vertical < m; vertical++) {
+                System.out.println("|");
+            }
+        }
+        
     }
-
-
-//for(s =1; s == n; s++){
-//            System.out.println("");
-//}
 }
+

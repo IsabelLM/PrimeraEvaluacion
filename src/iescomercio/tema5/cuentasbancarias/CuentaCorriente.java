@@ -5,6 +5,7 @@
  */
 package iescomercio.tema5.cuentasbancarias;
 
+import com.sun.org.apache.xpath.internal.operations.Equals;
 import java.util.Objects;
 
 /**
@@ -17,9 +18,6 @@ public class CuentaCorriente {
     private NumeroDeCuenta numDeCuenta;
     private double saldo;
 
-    public CuentaCorriente() {
-    }
-
     public CuentaCorriente(Titular aTitular, NumeroDeCuenta numDeCuenta, double saldo) {
         this.aTitular = aTitular;
         this.numDeCuenta = numDeCuenta;
@@ -27,9 +25,7 @@ public class CuentaCorriente {
     }
 
     public CuentaCorriente(Titular aTitular, NumeroDeCuenta numDeCuenta) {
-        this.aTitular = aTitular;
-        this.numDeCuenta = numDeCuenta;
-        saldo = 15.3;
+        this(aTitular, numDeCuenta, 15.3);
     }
 
     public Titular getaTitular() {
@@ -61,30 +57,15 @@ public class CuentaCorriente {
                 + " Saldo: " + saldo);
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
+    public boolean equals(Object o) {
+        CuentaCorriente cc = (CuentaCorriente) o;
+        if (this.getNumDeCuenta().equals(cc.getNumDeCuenta())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    @Override
-    public boolean equals(Object obj) {
-       NumeroDeCuenta ndc = (NumeroDeCuenta) obj;
-       return numDeCuenta.getNumeroDeCuenta() == ndc.getNumeroDeCuenta();
-    }
-
-//    public boolean equals(CuentaCorriente pCuentaCorriente) {
-//        NumeroDeCuenta aux1, aux2;
-//        
-//        aux2 = pCuentaCorriente.getNumDeCuenta();
-//
-//        if (numDeCuenta == aux2) {
-//            return true;
-//
-//        } else {
-//            return false;
-//        }
-//    }
     @Override
     public String toString() {
         return (aTitular.toString());

@@ -15,11 +15,10 @@ public class Titular {
     private int edad;
 
     //constructor
-
-    public Titular(String pNombre, String pApellidos, int pEdad) {
-        nombre = pNombre;
-        apellidos = pApellidos;
-        edad = pEdad;
+    public Titular(String nombre, String apellidos, int edad) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
     }
 
     //setter   
@@ -34,7 +33,9 @@ public class Titular {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
     //Getter
+
     public String getNombre() {
         return nombre;
     }
@@ -47,9 +48,12 @@ public class Titular {
         return edad;
     }
     //Metodo toString completo
-    
+
     @Override
-    public String toString(){
-        return ("Nombre: " + nombre +" \nApellidos: " + apellidos + " \nEdad: " + edad);
+    public String toString() {
+        String aux;
+        aux = ("Nombre: " + nombre + " \nApellidos: "
+                + apellidos + " \nEdad: " + edad);
+        return aux;
     }
 }

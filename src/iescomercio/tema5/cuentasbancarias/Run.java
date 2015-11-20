@@ -13,13 +13,16 @@ public class Run {
 
     public static void main(String[] args) {
         
+        
+        
         Titular isabel = new Titular("Isabel", "Lavieja", 22);
         NumeroDeCuenta miNumeroDeCuentaCorriente = new NumeroDeCuenta(2, 12, 2, 1212);
         CuentaCorriente miCuenta = new CuentaCorriente(isabel, miNumeroDeCuentaCorriente);
         CuentaAhorro miAhorro = new CuentaAhorro(isabel, miNumeroDeCuentaCorriente);
         
+        
         Titular daniel = new Titular("Daniel", "Mena", 22);
-        NumeroDeCuenta suNumeroDeCuentaCorriente = new NumeroDeCuenta(2, 12, 2, 1212);
+        NumeroDeCuenta suNumeroDeCuentaCorriente = new NumeroDeCuenta(2, 12, 2, 1222);
         CuentaCorriente suCuenta = new CuentaCorriente(daniel, suNumeroDeCuentaCorriente);
         
 //        miAhorro.calcularInteres();

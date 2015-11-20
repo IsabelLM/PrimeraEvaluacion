@@ -11,7 +11,7 @@ package iescomercio.tema5.cuentasbancarias;
  */
 public class CuentaAhorro extends CuentaCorriente {
 
-    double interes;
+    private double interes;
 
     public CuentaAhorro(Titular aTitular, NumeroDeCuenta numDeCuenta, double saldo, double interes) {
         super(aTitular, numDeCuenta, saldo);
@@ -27,11 +27,15 @@ public class CuentaAhorro extends CuentaCorriente {
     }
 
     public double getInteres() {
-        return interes;
+        return this.interes;
     }
 
     public void calcularInteres() {
-        super.setSaldo(super.getSaldo() + interes);
+        double aux;
+        
+        aux = getSaldo() * (this.interes / 100);
+        this.setSaldo(aux);
+        
     }
 
 }

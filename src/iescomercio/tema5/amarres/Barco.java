@@ -14,13 +14,16 @@ import java.util.GregorianCalendar;
 public class Barco {
 
     private String matricula;
-    private double eslora;
+    private float eslora;
     private GregorianCalendar añoFabricacion;
+    private Alquiler alq;
 
-    public Barco(String matricula, double eslora, GregorianCalendar añoFabricacion) {
+    public Barco(String matricula, float eslora, GregorianCalendar añoFabricacion, Alquiler alq) {
         this.matricula = matricula;
         this.eslora = eslora;
         this.añoFabricacion = añoFabricacion;
+        this.alq = alq;
+
     }
 
     public Barco() {
@@ -38,7 +41,7 @@ public class Barco {
         return eslora;
     }
 
-    public void setEslora(double eslora) {
+    public void setEslora(float eslora) {
         this.eslora = eslora;
     }
 
@@ -50,4 +53,11 @@ public class Barco {
         this.añoFabricacion = añoFabricacion;
     }
 
+    public float calcularAlquiler() {
+        float precioDia;
+        precioDia = (eslora * 10) * +2;
+        
+        return precioDia;
+
+    }
 }

@@ -5,10 +5,15 @@
  */
 package iescomercio.tema5.amarres;
 
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author VESPERTINO
  */
 public class Yates extends Barco {
+    private int cv, camarotes;
+
+    
     
 }

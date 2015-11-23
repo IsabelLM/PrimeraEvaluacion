@@ -5,10 +5,18 @@
  */
 package iescomercio.tema5.amarres;
 
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author VESPERTINO
  */
 public class Deportivos extends Barco{
+   private int cv;
+
+  
     
+   
+   
+   
 }

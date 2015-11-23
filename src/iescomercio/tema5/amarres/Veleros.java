@@ -5,10 +5,20 @@
  */
 package iescomercio.tema5.amarres;
 
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author VESPERTINO
  */
 public class Veleros extends Barco{
+
+    private int mastiles;
+
+    public Veleros(String matricula, double eslora, GregorianCalendar añoFabricacion, int mastiles) {
+        this.mastiles = mastiles;
+    }
+    
+    
     
 }

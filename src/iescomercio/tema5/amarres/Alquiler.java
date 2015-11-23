@@ -13,16 +13,17 @@ import java.util.GregorianCalendar;
  */
 public class Alquiler {
 
-    Cliente cliente;
+    private Cliente cliente;
     private int posicionAmarre;
-    private GregorianCalendar fechaInicio, fechaFinal;
+    GregorianCalendar fInicial, fFinal;
+    //private GregorianCalendar fechaInicio, fechaFinal;
     private Barco barco;
 
-    public Alquiler(Cliente cliente, int posicionAmarre, GregorianCalendar fechaFinal, GregorianCalendar fechaInicio, Barco barco) {
+    public Alquiler(Cliente cliente, int posicionAmarre, Barco barco, GregorianCalendar fInicial, GregorianCalendar fFinal) {
         this.cliente = cliente;
         this.posicionAmarre = posicionAmarre;
-        this.fechaInicio = fechaInicio;
-        this.fechaFinal = fechaFinal;
+        this.fInicial = fInicial;
+        this.fFinal = fFinal;
         this.barco = barco;
     }
 
@@ -42,22 +43,6 @@ public class Alquiler {
         this.posicionAmarre = posicionAmarre;
     }
 
-    public GregorianCalendar getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(GregorianCalendar fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public GregorianCalendar getFechaFinal() {
-        return fechaFinal;
-    }
-
-    public void setFechaFinal(GregorianCalendar fechaFinal) {
-        this.fechaFinal = fechaFinal;
-    }
-
     public Barco getBarco() {
         return barco;
     }
@@ -65,9 +50,31 @@ public class Alquiler {
     public void setBarco(Barco barco) {
         this.barco = barco;
     }
-    
-    public void calcularAlquiler(){
-        
+
+    public long diasTotales(GregorianCalendar fInicial, GregorianCalendar fFinal) {
+        GregorianCalendar date1 = fInicial;
+        GregorianCalendar date2 = fFinal;
+        long difms = date2.getTimeInMillis() - date1.getTimeInMillis();
+        long difd = difms / (1000 * 60 * 60 * 24);
+        return difd;
     }
 
+    public float dameLaCuenta() {
+        float precioDia;
+        int diasTotales;
+        diasTotales = (int) diasTotales(fInicial, fFinal);
+
+        precioDia = barco.calcularAlquiler();
+        // Calculo cuantos dias ha estado
+        return precioDia * diasTotales;
+    }
 }
+
+//    public long calcularDias() {
+//        long milisegundos, dias;
+//
+//        milisegundos = fechaInicio.getTimeInMillis() - fechaFinal.getTimeInMillis();
+//        dias = milisegundos / 1000 / 60 / 60 / 24;
+//        return dias;
+//    }
+

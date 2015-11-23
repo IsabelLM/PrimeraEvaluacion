@@ -11,6 +11,7 @@ package iescomercio.tema5.amarres;
  */
 public class Run {
     public static void main(String[] args) {
-        
+        Cliente isabel = new Cliente("Isabel", 16637938);
+        Barco miBarco = new Barco(1212, 12, isabel, null)
     }
 }

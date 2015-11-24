@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema2.sentenciasControlDeFlujo;
+package iescomercio.tema2.sentenciasControlDeFlujo.ejercIf;
 
 import java.util.Scanner;
 
@@ -11,27 +11,24 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioIf4 {
+public class EjercicioIf6 {
 
     public static void main(String[] args) {
-        //pedir datos 
+        //pedir datos
         int x, y;
         Scanner sc = new Scanner(System.in);
 
         //pedir datos
         System.out.print("Dime un número: ");
         x = sc.nextInt();
-        System.out.print("Dime otro numero: ");
+        System.out.print("Dime otro número: ");
         y = sc.nextInt();
 
-        //realizar operaciones 
-        if (x == y) {
-            System.out.println("Los numeros son iguales.");
-        } else if (x > y) {
-            System.out.println(+x + " es mayor que " + y);
+        //realizar operaciones
+        if (x % y == 0) {
+            System.out.printf("%d es multiplo de %d ", x, y);
         } else {
-            System.out.println(+y + " es mayor que " + x);
+            System.out.println("No son multiplos");
         }
-
     }
 }

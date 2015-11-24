@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema2.sentenciasControlDeFlujo;
+package iescomercio.tema2.sentenciasControlDeFlujo.bucles;
 
 
 //  Realizar un programa en java que muestre las 10 tablas de multiplicar.

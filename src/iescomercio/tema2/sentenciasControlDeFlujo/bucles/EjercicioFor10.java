@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema2.sentenciasControlDeFlujo;
+package iescomercio.tema2.sentenciasControlDeFlujo.bucles;
 
 import java.util.Scanner;
 
@@ -11,19 +11,20 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioBucle10 {
+public class EjercicioFor10 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = 1, suma = 0, x;
+        int n, suma = 0, x;
         double media = 0;
-        while (n <= 15) {
+        for (n = 0; n < 15; n++) {
             System.out.println("Dame un numero");
             x = sc.nextInt();
-            if (x != 0) {
+            if (x == 0) {
+                n--;
+            } else {
                 suma += x; //suma = suma + x; acumulador
                 media = (double) suma / 15;
-                n++;
             }
 
         }

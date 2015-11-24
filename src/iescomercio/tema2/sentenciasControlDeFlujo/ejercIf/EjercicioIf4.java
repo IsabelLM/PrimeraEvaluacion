@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema2.sentenciasControlDeFlujo;
+package iescomercio.tema2.sentenciasControlDeFlujo.ejercIf;
 
 import java.util.Scanner;
 
@@ -11,26 +11,27 @@ import java.util.Scanner;
  *
  * @author VESPERTINO
  */
-public class EjercicioIf3 {
+public class EjercicioIf4 {
 
     public static void main(String[] args) {
-        //declaracion variables
-        int x;
+        //pedir datos 
+        int x, y;
         Scanner sc = new Scanner(System.in);
 
         //pedir datos
         System.out.print("Dime un número: ");
         x = sc.nextInt();
+        System.out.print("Dime otro numero: ");
+        y = sc.nextInt();
 
-        //realizar operaciones
-        if (x != 0) {
-            if (x % 2 == 0) {
-                System.out.println("El numero es par.");
-            } else {
-                System.out.println("El numero es impar.");
-            }
+        //realizar operaciones 
+        if (x == y) {
+            System.out.println("Los numeros son iguales.");
+        } else if (x > y) {
+            System.out.println(+x + " es mayor que " + y);
         } else {
-            System.out.println("El cero no es par ni impar.");
+            System.out.println(+y + " es mayor que " + x);
         }
+
     }
 }

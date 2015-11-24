@@ -11,14 +11,26 @@ import java.util.GregorianCalendar;
  *
  * @author VESPERTINO
  */
-public class Veleros extends Barco{
+public class Veleros extends Barco {
 
     private int mastiles;
 
-    public Veleros(String matricula, double eslora, GregorianCalendar añoFabricacion, int mastiles) {
+    public Veleros(int mastiles, String matricula, float eslora, int añoFabricacion) {
+        super(matricula, eslora, añoFabricacion);
         this.mastiles = mastiles;
     }
+
+    public int getMastiles() {
+        return mastiles;
+    }
+
+    public void setMastiles(int mastiles) {
+        this.mastiles = mastiles;
+    }
+
     
-    
-    
+    @Override
+    public float calcularAlquiler() {
+        return super.calcularAlquiler() + (mastiles * 5); 
+    }
 }

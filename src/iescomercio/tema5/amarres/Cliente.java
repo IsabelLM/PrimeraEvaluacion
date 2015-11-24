@@ -5,6 +5,8 @@
  */
 package iescomercio.tema5.amarres;
 
+import java.util.Objects;
+
 /**
  *
  * @author VESPERTINO
@@ -33,6 +35,21 @@ public class Cliente {
 
     public void setDni(int dni) {
         this.dni = dni;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Cliente aux = (Cliente) obj;
+        if (aux.getDni() == this.getDni()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return getDni() + " " + getNombre();
     }
     
     

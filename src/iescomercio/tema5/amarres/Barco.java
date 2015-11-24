@@ -16,17 +16,13 @@ public class Barco {
     private String matricula;
     private float eslora;
     private GregorianCalendar añoFabricacion;
-    private Alquiler alq;
 
-    public Barco(String matricula, float eslora, GregorianCalendar añoFabricacion, Alquiler alq) {
+    public Barco(String matricula, float eslora, int añoFabricacion) {
         this.matricula = matricula;
         this.eslora = eslora;
-        this.añoFabricacion = añoFabricacion;
-        this.alq = alq;
+        //this.añoFabricacion = new GregorianCalendar(añoFabricacion, mesFabricacion, diaFabricacion);
+        this.añoFabricacion = new GregorianCalendar(añoFabricacion, 0, 0);
 
-    }
-
-    public Barco() {
     }
 
     public String getMatricula() {
@@ -53,10 +49,10 @@ public class Barco {
         this.añoFabricacion = añoFabricacion;
     }
 
+    //método que calcula cuanto se paga un día
     public float calcularAlquiler() {
         float precioDia;
-        precioDia = (eslora * 10) * +2;
-        
+        precioDia = (eslora * 10);
         return precioDia;
 
     }

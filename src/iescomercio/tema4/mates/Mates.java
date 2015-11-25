@@ -68,7 +68,6 @@ public class Mates {
         String contador = "";
 
         for (int i = 0; i < numero + 1; i++) {
-
             contador += i;
         }
         System.out.println(contador);
@@ -81,6 +80,16 @@ public class Mates {
     }
 
     public void base2() {
+        int num = 0;
+        int num2 = numero;
+        String base = "";
+        do {
+            num = num2 % 2;
+            base += num;
+            num2 = num2 / 2;
+        } while (num2 != 1);
+        System.out.println(base);
+
     }
 
 }

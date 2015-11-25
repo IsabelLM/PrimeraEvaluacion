@@ -11,11 +11,12 @@ package iescomercio.tema4.mates;
  */
 public class Run {
     public static void main(String[] args) {
-        Mates mate = new Mates(7);
+        Mates mate = new Mates(60);
         
         System.out.println(mate.esPerfecto());
         System.out.println(mate.esPrimo());
         mate.listaPerfectos();
         mate.listaNumeros();
+        mate.base2();
     }
 }

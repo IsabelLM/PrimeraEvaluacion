@@ -26,70 +26,96 @@ public class Mates {
     }
 
     public boolean esPerfecto() {
-        int suma, i;
-        boolean perfecto;
-        suma = 0;
-        perfecto = false;
+        int suma = 0;
 
-        for (i = 1; i < numero; i++) {
+        for (int i = 1; i < numero; i++) {
             if (numero % i == 0) {
                 suma = suma + i;
             }
         }
         if (suma == numero) {
-            perfecto = true;
+            return true;
         } else {
-            perfecto = false;
+            return false;
         }
-        return perfecto;
     }
 
     public boolean esPrimo() {
-        boolean primo;
-        primo = false;
-        if (numero / 2 == 0) {
-            primo = false;
-        } else if (numero / numero == 0 && numero / 1 == 0) {
-            primo = true;
+        int contador = 0;
+        for (int i = 2; i <= numero; i++) {//empiezo a dos para decir que solo sean divisibles por si mismo
+            if (numero % i == 0) {
+                contador++;
+            }
         }
-        return primo;
+        if (contador == 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
+    //    public boolean esPrimo() {
+    //        boolean primo;
+    //        primo = false;
+    //        if (numero / 2 == 0) {
+    //            primo = false;
+    //        } else if (numero / numero == 0 && numero / 1 == 0) {
+    //            primo = true;
+    //        }
+    //        return primo;
+    //    }
     public void listaPerfectos() {
-        String contador = "";
-
-        for (int i = 0; i < numero; i++) {
-            contador += i;
+        int suma;
+        System.out.println("Lista de numeros perfectos hasta N");
+        for (int a = 1; a < numero; a++) {
+            suma = 0;
+            for (int b = 1; b < a; b++) {
+                if (a % b == 0) {
+                    suma = suma + b;
+                }
+            }
+            if (suma == a) {
+                System.out.println(suma);
+            }
         }
-        System.out.println(contador);
     }
 
     public void listaNumeros() {
-        String contador = "";
-
-        for (int i = 0; i < numero + 1; i++) {
-            contador += i;
+        for (int a = 1; a <= numero; a++) {
+            System.out.println(a);
         }
-        System.out.println(contador);
     }
 
-    public void sumaCifras() {
+    public int sumaCifras() {
+        int suma = 0;
+        while (numero != 0) {
+            suma = suma + (numero % 10);
+            numero = numero / 10;
+        }
+        return suma;
     }
 
-    public void numDivisores() {
+    public int numDivisores() {
+        int contador = 0;
+        for (int i = 1; i <= numero; i++) {
+            if (numero % i == 0) {
+                contador++;
+            }
+        }
+        return contador;
     }
 
-    public void base2() {
-        int num = 0;
-        int num2 = numero;
-        String base = "";
-        do {
-            num = num2 % 2;
-            base += num;
-            num2 = num2 / 2;
-        } while (num2 != 1);
-        System.out.println(base);
-
+    public String base2() {
+        //return Integer.toBinaryString(numero);
+        String binario = "";
+        while (numero != 0) { //se pone hasta 0 para quedarte con el resultado de la ultima división
+            if (numero % 2 == 0) {
+                binario = "0" + binario;
+            } else {
+                binario = "1" + binario;
+            }
+            numero = numero / 2;
+        }
+        return binario;
     }
-
 }

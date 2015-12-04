@@ -21,11 +21,15 @@ public class LosDalton {
         System.out.println("Cuántas viñetas me traes?");
         viñetas = sc.nextInt();
         while (viñetas != 0) {
+            // Comprobar que como minimo me indican 2 hermanos
             do {
                 System.out.println("Cuántas personas aparecen en la foto?");
                 personas = sc.nextInt();
+                if (personas < 2) {
+                    System.out.println("Tienen que ser más de 2 hermanos.");
+                }
             } while (personas < 2);
-
+            // Pedir alturas
             do {
                 System.out.println("Dime las alturas de los hermanos");
                 altura = sc.nextInt();

@@ -64,21 +64,18 @@ public class Aleatorio {
         return valorAleatorio;
     }
 
-    public void muestraVariosAleatorios() {
+    public int muestraVariosAleatorios(int n) {
         //Metodo que pide al usuario que indique cuántos aleatorios quiere que genere
         Scanner sc = new Scanner(System.in);
-        int aleatorios, valorAleatorio;
-
-        System.out.println("Di cuantos aleatorios quieres que se muestren:");
-        aleatorios = sc.nextInt();
+        int aleatorios = 0, valorAleatorio = 0;
 
         for (; aleatorios != 0; aleatorios--) {
             //Para sacar enteros:
             valorAleatorio = (int) Math.floor(Math.random() * (inicial - afinal + 1) + afinal);
             //Para sacar decimales:
             // valorAleatorio = Math.random() * (inicial - afinal) + afinal;
-            System.out.println(valorAleatorio);
         }
+        return valorAleatorio;
     }
 
     public void juegoAdivinaNumero() {
